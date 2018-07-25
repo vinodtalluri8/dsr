@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('diva-sales-recon App', () => {
+describe('internalcontrol App', () => {
   let page: AppPage;
 
   beforeEach(() => {

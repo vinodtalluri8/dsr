@@ -8,13 +8,16 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MultiSelectModule } from 'primeng/primeng';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import { SalesReconComponent } from './sales-recon/sales-recon.component';
+import { MockDataService } from "./services/mock-data.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SalesReconComponent
   ],
   imports: [
-    BrowserModule,
     BrowserModule,
     CoreModule,
     AngularFontAwesomeModule,
@@ -23,8 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MultiSelectModule,
     FormsModule,
     BrowserAnimationsModule,
+    RadioButtonModule
   ],
-  providers: [],
+  providers: [MockDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

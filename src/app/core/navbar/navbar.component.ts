@@ -26,51 +26,24 @@ export class NavbarComponent implements OnInit {
   navItems = [
     {
       displayName: 'Trade Reconciliation',
+      route: 'salesRecon'
     },
-    {
+        {
       displayName: 'Position Reconciliation',
-      route: 'keycontrols'
+      route: 'salesRecon'
     },
-     {
+        {
       displayName: 'Roll Forward Reconciliation',
+      route: 'salesRecon'
     },
-     {
+        {
       displayName: 'Research',
-       children: [
-        {
-          displayName: 'Search SRS Trades',
-          route: 'createProgramInstance'
-        },
-        {
-          displayName: 'Search TA Trades',
-          route: 'editProgramInstance'
-        }]
+      route: ''
     },
-     {
+        {
       displayName: 'Maintenance',
-      children: [
-        {
-          displayName: 'Data Provider',
-          route: 'controlObjectivesMaintenance'
-        },
-        {
-          displayName: 'Data Provider Assign',
-          route: 'riskMaintenance'
-        },
-        {
-          displayName: 'SRS Timing Factor',
-          route: 'riskMaintenance'
-        },
-        {
-          displayName: 'Trade Category',
-          route: 'riskMaintenance'
-        },
-        {
-          displayName: 'System Value',
-          route: 'riskMaintenance'
-        },
-      ]
-    }
+      route: ''
+    },
   ];
   ngOnInit() {
   }

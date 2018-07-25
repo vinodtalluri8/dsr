@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Diva Sales Reacon';
+  title = 'SALES RECON';
   src = './assets/DIVA_Home.gif';
   headerStyle = 'header';
+
+  constructor() {
+
+  }
+
+
 }
