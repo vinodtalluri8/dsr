@@ -7,10 +7,12 @@ export class MockDataService {
 dropdownUrl = 'http://localhost:4200/data/dropdown-mock.json';
 multiDropdownUrl = 'http://localhost:4200/data/multiDropdown-mock.json';
   constructor(private httpClient: HttpClient) { }
-  getMatrixData() {
+  
+  getDropdownData() {
     return this.httpClient.get(this.dropdownUrl);
   }
-  getMatrixMultiSelect() {
+  
+  getMultiDropdownData() {
     return this.httpClient.get(this.multiDropdownUrl);
   }
   

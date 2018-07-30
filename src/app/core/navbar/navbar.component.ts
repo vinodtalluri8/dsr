@@ -26,15 +26,15 @@ export class NavbarComponent implements OnInit {
   navItems = [
     {
       displayName: 'Trade Reconciliation',
-      route: 'salesRecon'
+      route: 'salesRecon/tradeReconciliation'
     },
         {
       displayName: 'Position Reconciliation',
-      route: 'salesRecon'
+      route: 'salesRecon/positionReconciliation'
     },
         {
       displayName: 'Roll Forward Reconciliation',
-      route: 'salesRecon'
+      route: 'salesRecon/rollForwardReconciliation'
     },
         {
       displayName: 'Research',

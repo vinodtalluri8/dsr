@@ -11,11 +11,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { SalesReconComponent } from './sales-recon/sales-recon.component';
 import { MockDataService } from "./services/mock-data.service";
+import { TradeReconciliationComponent } from './sales-recon/trade-reconciliation/trade-reconciliation.component';
+import { PositionReconciliationComponent } from './sales-recon/position-reconciliation/position-reconciliation.component';
+import { RollForwardReconciliationComponent } from './sales-recon/roll-forward-reconciliation/roll-forward-reconciliation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SalesReconComponent
+    SalesReconComponent,
+    TradeReconciliationComponent,
+    PositionReconciliationComponent,
+    RollForwardReconciliationComponent
   ],
   imports: [
     BrowserModule,

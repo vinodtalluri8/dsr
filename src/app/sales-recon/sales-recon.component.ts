@@ -7,59 +7,59 @@ import { MockDataService } from "../services/mock-data.service";
   styleUrls: ['./sales-recon.component.css']
 })
 export class SalesReconComponent implements OnInit {
-  mockDropDownData;
-  mockMultiDropDownData;
-  dataProvider;
-  reconStatus;
-  fundStatus;
-  fromDate;
-  productCode;
-  toDate;
-  sortBy;
-  dataJson;
+  // mockDropDownData;
+  // mockMultiDropDownData;
+  // dataProvider;
+  // reconStatus;
+  // fundStatus;
+  // fromDate;
+  // productCode;
+  // toDate;
+  // sortBy;
+  // dataJson;
 
   constructor(private mockService : MockDataService) { }
 
   ngOnInit() {
-    this.preloadData();
+    // this.preloadData();
   }
 
-    preloadData() {
-    this.mockService.getMatrixData().subscribe(
-      (data) => {
-        this.mockDropDownData = data;
-      }
-    );
-    this.mockService.getMatrixMultiSelect().subscribe(
-      (data) => {
-        this.mockMultiDropDownData = data;
-      }
-    );
-  }
+  //   preloadData() {
+  //   this.mockService.getMatrixData().subscribe(
+  //     (data) => {
+  //       this.mockDropDownData = data;
+  //     }
+  //   );
+  //   this.mockService.getMatrixMultiSelect().subscribe(
+  //     (data) => {
+  //       this.mockMultiDropDownData = data;
+  //     }
+  //   );
+  // }
 
-  disable() {
-    if ( !this.dataProvider || !this.reconStatus || !this.fundStatus || !this.fromDate || !this.productCode || !this.toDate || !this.sortBy) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // disable() {
+  //   if ( !this.dataProvider || !this.reconStatus || !this.fundStatus || !this.fromDate || !this.productCode || !this.toDate || !this.sortBy) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
-  saveData(){
-        if (!this.disable()) {
-      this.dataJson = {
-        'dataProvider': this.dataProvider,
-        'reconStatus': this.reconStatus,
-        'fundStatus': this.fundStatus,
-        'fromDate': this.fromDate.toString(),
-        'productCode': this.productCode,
-        'toDate': this.toDate.toString(),
-        'sortBy': this.sortBy
-      };
-    }
+  // saveData(){
+  //       if (!this.disable()) {
+  //     this.dataJson = {
+  //       'dataProvider': this.dataProvider,
+  //       'reconStatus': this.reconStatus,
+  //       'fundStatus': this.fundStatus,
+  //       'fromDate': this.fromDate.toString(),
+  //       'productCode': this.productCode,
+  //       'toDate': this.toDate.toString(),
+  //       'sortBy': this.sortBy
+  //     };
+  //   }
 
-    console.log('dataJson',this.dataJson);
-  }
+  //   console.log('dataJson',this.dataJson);
+  // }
 
 
 }
