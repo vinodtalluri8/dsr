@@ -9,19 +9,12 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MultiSelectModule } from 'primeng/primeng';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RadioButtonModule} from 'primeng/radiobutton';
-import { SalesReconComponent } from './sales-recon/sales-recon.component';
 import { MockDataService } from "./services/mock-data.service";
-import { TradeReconciliationComponent } from './sales-recon/trade-reconciliation/trade-reconciliation.component';
-import { PositionReconciliationComponent } from './sales-recon/position-reconciliation/position-reconciliation.component';
-import { RollForwardReconciliationComponent } from './sales-recon/roll-forward-reconciliation/roll-forward-reconciliation.component';
+import { SalesReconModule } from "./sales-recon/sales-recon.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SalesReconComponent,
-    TradeReconciliationComponent,
-    PositionReconciliationComponent,
-    RollForwardReconciliationComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +25,8 @@ import { RollForwardReconciliationComponent } from './sales-recon/roll-forward-r
     MultiSelectModule,
     FormsModule,
     BrowserAnimationsModule,
-    RadioButtonModule
+    RadioButtonModule,
+    SalesReconModule
   ],
   providers: [MockDataService],
   bootstrap: [AppComponent]

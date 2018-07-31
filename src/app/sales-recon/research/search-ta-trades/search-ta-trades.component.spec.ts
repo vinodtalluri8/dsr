@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SalesReconComponent } from './sales-recon.component';
+import { SearchTaTradesComponent } from './search-ta-trades.component';
 
-describe('SalesReconComponent', () => {
-  let component: SalesReconComponent;
-  let fixture: ComponentFixture<SalesReconComponent>;
+describe('SearchTaTradesComponent', () => {
+  let component: SearchTaTradesComponent;
+  let fixture: ComponentFixture<SearchTaTradesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SalesReconComponent ]
+      declarations: [ SearchTaTradesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SalesReconComponent);
+    fixture = TestBed.createComponent(SearchTaTradesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

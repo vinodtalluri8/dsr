@@ -1,0 +1,132 @@
+<div class="text-center">
+  <h4>Filter SRS Master Trade</h4>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-xs-4">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Data Provider</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.dataProvider = $event' [selectedItem]='dataProvider'></app-dropdown>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Reported Flag</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconStatus = $event' [selectedItem]='reconStatus'></app-dropdown>
+        </div>
+      </div>
+    </div>
+     
+          <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Batch Id</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-xs-4">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">TA Post Date</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
+          <app-calender id="calender" class="calWidth" (calenderSelected)='this.fromDate=$event' showIcon='true' yearNavigator='true' monthNavigator='true'
+            yearRange='2000:2030' [inputDate]='fromDate'></app-calender>
+        </div>
+      </div>
+    </div>
+         <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Fund / Product Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.productCode = $event' [selectedItem]='productCode'></app-dropdown>
+        </div>
+      </div>
+    </div>
+      <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Serial Id</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+   
+
+  </div>
+    <div class="col-lg-4 col-md-4 col-xs-4">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Type Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+      
+      <div>
+      <div class="row paddingTopClass dishide">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Fund</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+
+          <p-radioButton name="group1" value="Implemented" label="Fund" (click)="checkRadio('fund')"></p-radioButton>
+          <p-radioButton name="group1" value="Will be Implemented" label="Product Code" (click)="checkRadio('implement')"></p-radioButton>
+
+        </div>
+      </div>
+    </div>
+      <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Clear Firm Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+  <app-button (click)="saveData()" label="Go" styleClass='button-action'></app-button>
+</div>
+

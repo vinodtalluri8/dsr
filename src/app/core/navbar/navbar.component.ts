@@ -38,7 +38,13 @@ export class NavbarComponent implements OnInit {
     },
         {
       displayName: 'Research',
-      route: ''
+      children : [{
+        displayName: 'Search SRS Trades',
+        route: 'research/srstrades'
+      },{
+        displayName: 'Search TA Trades',
+        route: 'research/tatrades'
+      }]
     },
         {
       displayName: 'Maintenance',

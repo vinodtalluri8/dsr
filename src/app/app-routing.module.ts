@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { SalesReconComponent } from "./sales-recon/sales-recon.component";
 import { TradeReconciliationComponent } from "./sales-recon/trade-reconciliation/trade-reconciliation.component";
 import { RollForwardReconciliationComponent } from "./sales-recon/roll-forward-reconciliation/roll-forward-reconciliation.component";
 import { PositionReconciliationComponent } from "./sales-recon/position-reconciliation/position-reconciliation.component";
+import { SearchSrsTradesComponent } from "./sales-recon/research/search-srs-trades/search-srs-trades.component";
+import { SearchTaTradesComponent } from "./sales-recon/research/search-ta-trades/search-ta-trades.component";
 
 const routes: Routes = [
   // { path:'salesRecon', component: SalesReconComponent, children:[
@@ -14,7 +15,9 @@ const routes: Routes = [
   // ]}
     { path:'salesRecon/tradeReconciliation', component: TradeReconciliationComponent},
     { path:'salesRecon/positionReconciliation', component: PositionReconciliationComponent},
-    { path:'salesRecon/rollForwardReconciliation', component: RollForwardReconciliationComponent}
+    { path:'salesRecon/rollForwardReconciliation', component: RollForwardReconciliationComponent},
+    { path: 'research/srstrades', component: SearchSrsTradesComponent},
+    { path: 'research/tatrades', component: SearchTaTradesComponent}
 ];
 
 @NgModule({
