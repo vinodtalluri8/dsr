@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { MockDataService } from "./services/mock-data.service";
 import { SalesReconModule } from "./sales-recon/sales-recon.module";
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SalesReconModule } from "./sales-recon/sales-recon.module";
     FormsModule,
     BrowserAnimationsModule,
     RadioButtonModule,
-    SalesReconModule
+    SalesReconModule,
+    TableModule
   ],
   providers: [MockDataService],
   bootstrap: [AppComponent]

@@ -23,7 +23,7 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconStatus = $event' [selectedItem]='reconStatus'></app-dropdown>
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reportedFlag = $event' [selectedItem]='reportedFlag'></app-dropdown>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        <app-input (inputTextSelected)='this.batchId = $event' #inputbatchId [value]='batchId' maxlength="60"></app-input>
         </div>
       </div>
     </div>
@@ -51,8 +51,8 @@
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
-          <app-calender id="calender" class="calWidth" (calenderSelected)='this.fromDate=$event' showIcon='true' yearNavigator='true' monthNavigator='true'
-            yearRange='2000:2030' [inputDate]='fromDate'></app-calender>
+          <app-calender id="calender" class="calWidth" (calenderSelected)='this.taPostDate = $event' showIcon='true' yearNavigator='true' monthNavigator='true'
+            yearRange='2000:2030' [inputDate]='taPostDate'></app-calender>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        <app-input (inputTextSelected)='this.serialId = $event' #inputserialId [value]='serialId' maxlength="60"></app-input>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        <app-input (inputTextSelected)='this.tradeType = $event' #inputtradeType [value]='tradeType' maxlength="60"></app-input>
         </div>
       </div>
     </div>
@@ -106,8 +106,8 @@
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
 
-          <p-radioButton name="group1" value="Implemented" label="Fund" (click)="checkRadio('fund')"></p-radioButton>
-          <p-radioButton name="group1" value="Will be Implemented" label="Product Code" (click)="checkRadio('implement')"></p-radioButton>
+          <p-radioButton name="group1" value="fund" label="Fund" (click)="checkRadio('fund')"></p-radioButton>
+          <p-radioButton name="group1" value="productCode" label="Product Code" (click)="checkRadio('productCode')"></p-radioButton>
 
         </div>
       </div>
@@ -120,13 +120,13 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-        <app-input (inputTextSelected)='this.title=$event' #inputTitle [value]='title' maxlength="60"></app-input>
+        <app-input (inputTextSelected)='this.clearFirmCode = $event' #inputclearFirmCode [value]='clearFirmCode' maxlength="60"></app-input>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="text-center">
+  <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
   <app-button (click)="saveData()" label="Go" styleClass='button-action'></app-button>
 </div>
-

@@ -6,6 +6,7 @@ import { RollForwardReconciliationComponent } from "./sales-recon/roll-forward-r
 import { PositionReconciliationComponent } from "./sales-recon/position-reconciliation/position-reconciliation.component";
 import { SearchSrsTradesComponent } from "./sales-recon/research/search-srs-trades/search-srs-trades.component";
 import { SearchTaTradesComponent } from "./sales-recon/research/search-ta-trades/search-ta-trades.component";
+import { DataProviderComponent } from "./sales-recon/maintenance/data-provider/data-provider.component";
 
 const routes: Routes = [
   // { path:'salesRecon', component: SalesReconComponent, children:[
@@ -17,7 +18,8 @@ const routes: Routes = [
     { path:'salesRecon/positionReconciliation', component: PositionReconciliationComponent},
     { path:'salesRecon/rollForwardReconciliation', component: RollForwardReconciliationComponent},
     { path: 'research/srstrades', component: SearchSrsTradesComponent},
-    { path: 'research/tatrades', component: SearchTaTradesComponent}
+    { path: 'research/tatrades', component: SearchTaTradesComponent},
+    { path: 'maintenance/dataprovider', component: DataProviderComponent}
 ];
 
 @NgModule({

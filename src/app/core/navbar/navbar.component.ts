@@ -48,7 +48,22 @@ export class NavbarComponent implements OnInit {
     },
         {
       displayName: 'Maintenance',
-      route: ''
+      children : [{
+        displayName: 'Data Provider',
+        route: 'maintenance/dataprovider'
+      },{
+        displayName: 'Data Provider Assign',
+        route: ''
+      },{
+        displayName: 'SRS Timing Factor',
+        route: ''
+      },{
+        displayName: 'Trade Category',
+        route: ''
+      },{
+        displayName: 'System Value',
+        route: ''
+      }]      
     },
   ];
   ngOnInit() {

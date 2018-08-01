@@ -7,19 +7,31 @@ import { SharedModule } from "../shared/shared.module";
 import { RadioButtonModule } from "primeng/radiobutton";
 import { SearchSrsTradesComponent } from './research/search-srs-trades/search-srs-trades.component';
 import { SearchTaTradesComponent } from './research/search-ta-trades/search-ta-trades.component';
+import { DataProviderComponent } from './maintenance/data-provider/data-provider.component';
+import { DataProviderAssignComponent } from './maintenance/data-provider-assign/data-provider-assign.component';
+import { SrsTimingFactorComponent } from './maintenance/srs-timing-factor/srs-timing-factor.component';
+import { TradeCategoryComponent } from './maintenance/trade-category/trade-category.component';
+import { SystemValueComponent } from './maintenance/system-value/system-value.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
-    RadioButtonModule
+    RadioButtonModule,
+    TableModule
   ],
   declarations: [
     TradeReconciliationComponent,
     PositionReconciliationComponent,
     RollForwardReconciliationComponent,
     SearchSrsTradesComponent,
-    SearchTaTradesComponent
+    SearchTaTradesComponent,
+    DataProviderComponent,
+    DataProviderAssignComponent,
+    SrsTimingFactorComponent,
+    TradeCategoryComponent,
+    SystemValueComponent
   ]
 })
 export class SalesReconModule { }
