@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-data-provider',
@@ -22,7 +23,7 @@ export class DataProviderComponent implements OnInit {
   selectedProgram;
   selectedFilter;
 
-  constructor() { 
+  constructor(private router: Router) { 
      this.isPaginator = true;
     this.filterable = true;
     this.exportFileName = 'Checklists Scheduled';
@@ -86,4 +87,10 @@ export class DataProviderComponent implements OnInit {
     // console.log(' mesagepage ', this.msgs);
   }
 
+  addNew(){
+    this.router.navigate(['/maintenance/adddataprovider']);
+  }
+  editDataProvider(){
+    this.router.navigate(['/maintenance/editdataprovider']);
+  }
 }

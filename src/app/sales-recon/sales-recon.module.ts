@@ -13,6 +13,8 @@ import { SrsTimingFactorComponent } from './maintenance/srs-timing-factor/srs-ti
 import { TradeCategoryComponent } from './maintenance/trade-category/trade-category.component';
 import { SystemValueComponent } from './maintenance/system-value/system-value.component';
 import { TableModule } from 'primeng/table';
+import { AddDataProviderComponent } from './maintenance/data-provider/add-data-provider/add-data-provider.component';
+import { EditDataProviderComponent } from './maintenance/data-provider/edit-data-provider/edit-data-provider.component';
 
 @NgModule({
   imports: [
@@ -31,7 +33,9 @@ import { TableModule } from 'primeng/table';
     DataProviderAssignComponent,
     SrsTimingFactorComponent,
     TradeCategoryComponent,
-    SystemValueComponent
+    SystemValueComponent,
+    AddDataProviderComponent,
+    EditDataProviderComponent
   ]
 })
 export class SalesReconModule { }
