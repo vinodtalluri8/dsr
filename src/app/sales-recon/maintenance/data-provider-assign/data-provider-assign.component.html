@@ -1,3 +1,62 @@
-<p>
-  data-provider-assign works!
-</p>
+<h3 class="panel-title text-center">Data Providers Assign</h3>
+<div class="row">
+  <label class="control-label">Filter</label>
+  <div class="col-5">
+    <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedFilter = $event' [selectedItem]='selectedFilter'></app-dropdown>
+  </div>
+</div>
+<div class="align-right">
+  <app-button label='Add New' (click)="addNew()" styleClass='button-action'></app-button>
+</div>
+<div>
+
+  <p-table #scr [columns]="colHeaders" [value]="sales" [responsive]="true" [paginator]="true" [rows]="selectedRows" [alwaysShowPaginator]="false"
+    [exportFilename]="this.exportFileName" [loading]="loading" [resizableColumns]="true">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th class="text-center" *ngFor="let col of columns" [style.width]="col.width" [pSortableColumn]="col.field" pResizableColumn>
+          {{col.header}}
+        </th>
+      </tr>
+      <tr *ngIf="filterable && sales && sales.length > 0">
+        <th *ngFor="let col of columns" [style.width]="col.width">
+
+          <input pInputText type="text" placeholder="Filter" (input)="scr.filter($event.target.value, col.field, col.filterMatchMode)">
+
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-car>
+      <tr>
+        <td class="text-center">{{car.code}}</td>
+        <td class="text-center">{{car.description}}</td>
+        <td class="text-center">{{car.dailyTradeReconFlag}}</td>
+        <td class="text-center">{{car.tradeReconFlag}}</td>
+        <td class="text-center">{{car.monthlyRollFwdFlag}}</td>
+        <td class="text-center">{{car.tradeFailThresholdPercent}}</td>
+        <td class="text-center">{{car.posFailThresholdPercent}}</td>
+        <td class="text-center">{{car.tradeFailThresholdShares}}</td>
+        <td class="text-center">{{car.posFailThresholdShares}}</td>
+        <td class="text-center">{{car.description}}</td>
+        <td class="text-center">{{car.dailyTradeReconFlag}}</td>
+        <td class="text-center">{{car.tradeReconFlag}}</td>
+        <td class="text-center">{{car.monthlyRollFwdFlag}}</td>
+        <td class="text-center">{{car.tradeFailThresholdPercent}}</td>
+        <td class="text-center">{{car.posFailThresholdPercent}}</td>
+        <td class="text-center">{{car.tradeFailThresholdShares}}</td>
+        <td class="text-center">{{car.posFailThresholdShares}}</td>
+        <td class="text-center">{{car.activeFlag}}</td>
+        <!--<td class="text-center"><button>Edit</button></td>-->
+        <td class="text-center">
+          <app-button class="editButton" label='Edit' (click)="editDataProvider()" styleClass='button-action'></app-button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorright" let-state>
+      <app-dropdown [datasource]='displayRows' (selectedItemChange)='checkAndEnablePage($event)' [selectedItem]='selectedRows'></app-dropdown>
+    </ng-template>
+  </p-table>
+</div>
+<div *ngIf="!isPaginator">
+  <app-dropdown [datasource]='displayRows' (selectedItemChange)='checkAndEnablePage($event)' [selectedItem]='selectedRows'></app-dropdown>
+</div>

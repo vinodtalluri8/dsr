@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../../../services/mock-data.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-edit-data-provider',
-  templateUrl: './edit-data-provider.component.html',
-  styleUrls: ['./edit-data-provider.component.css']
+  selector: 'app-add-data-provider-assign',
+  templateUrl: './add-data-provider-assign.component.html',
+  styleUrls: ['./add-data-provider-assign.component.css']
 })
-export class EditDataProviderComponent implements OnInit {
+export class AddDataProviderAssignComponent implements OnInit {
 
-mockDropDownData;
+  mockDropDownData;
   mockMultiDropDownData;
   dataProviderCode;
   calendarType;
@@ -21,10 +22,14 @@ mockDropDownData;
   tradeFailThresholdPercent;
   activeStatus;
   dataJson;
+  formType;
 
-  constructor(private mockService : MockDataService) { }
+  constructor(private mockService : MockDataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.formType = params['type'];
+    })
     this.preloadData();
   }
 
@@ -80,4 +85,5 @@ mockDropDownData;
       this.tradeFailThresholdPercent = '';
       this.activeStatus = '';
   }
+
 }

@@ -1,0 +1,6 @@
+/*::ng-deep .editButton{*/
+/deep/ .ui-button {
+    height: 28px !important;
+    min-width: 16px !important;
+}
+

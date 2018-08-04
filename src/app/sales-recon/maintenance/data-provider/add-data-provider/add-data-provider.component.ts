@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../../../services/mock-data.service";
+import { Router, ActivatedRoute, RouterLink, UrlSegment } from '@angular/router';
 
 @Component({
   selector: 'app-add-data-provider',
@@ -21,10 +22,14 @@ export class AddDataProviderComponent implements OnInit {
   tradeFailThresholdPercent;
   activeStatus;
   dataJson;
+  formType;
 
-  constructor(private mockService : MockDataService) { }
+  constructor(private mockService : MockDataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.formType = params['type'];
+    })
     this.preloadData();
   }
 

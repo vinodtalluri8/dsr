@@ -1,5 +1,8 @@
-<div class="text-center">
+<div class="text-center" *ngIf="formType == 'add'">
   <h4>Add Sales Recon Data Providers</h4>
+</div>
+<div class="text-center" *ngIf="formType == 'edit'">
+  <h4>Edit Sales Recon Data Providers</h4>
 </div>
 <div class="row">
   <div class="col-lg-4 col-md-4 col-xs-4">
@@ -167,5 +170,5 @@
 <br>
 <div class="text-center">
   <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
-  <app-button (click)="saveData()" label="Save" styleClass='button-action'></app-button>
+  <app-button (click)="saveData()" [disabled]='disable()' label="Save" styleClass='button-action'></app-button>
 </div>

@@ -53,7 +53,7 @@ export class NavbarComponent implements OnInit {
         route: 'maintenance/dataprovider'
       },{
         displayName: 'Data Provider Assign',
-        route: ''
+        route: 'maintenance/dataproviderassign'
       },{
         displayName: 'SRS Timing Factor',
         route: ''

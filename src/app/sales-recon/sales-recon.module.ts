@@ -14,7 +14,7 @@ import { TradeCategoryComponent } from './maintenance/trade-category/trade-categ
 import { SystemValueComponent } from './maintenance/system-value/system-value.component';
 import { TableModule } from 'primeng/table';
 import { AddDataProviderComponent } from './maintenance/data-provider/add-data-provider/add-data-provider.component';
-import { EditDataProviderComponent } from './maintenance/data-provider/edit-data-provider/edit-data-provider.component';
+import { AddDataProviderAssignComponent } from './maintenance/data-provider-assign/add-data-provider-assign/add-data-provider-assign.component';
 
 @NgModule({
   imports: [
@@ -35,7 +35,7 @@ import { EditDataProviderComponent } from './maintenance/data-provider/edit-data
     TradeCategoryComponent,
     SystemValueComponent,
     AddDataProviderComponent,
-    EditDataProviderComponent
+    AddDataProviderAssignComponent
   ]
 })
 export class SalesReconModule { }
