@@ -5,11 +5,11 @@
   <h4>Edit Sales Recon Data Providers Assign</h4>
 </div>
 <div class="row">
-  <div class="col-lg-4 col-md-4 col-xs-4">
+  <div class="col-lg-3 col-md-3 col-xs-3">
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Data Provider Code</label>
+          <label class="control-label">Assign Sequence</label>
         </div>
       </div>
       <div class="row paddingDataClass">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-      <div>
+    <div>
       <div class="row paddingTopClass dishide">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Fund</label>
@@ -27,96 +27,29 @@
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
 
-          <p-radioButton name="group1" value="Daily Trade Recon Flag" label="Daily Trade Recon Flag" (click)="checkRadio('Daily Trade Recon Flag')"></p-radioButton>
-          <p-radioButton name="group1" value="Position Recon Flag" label="Position Recon Flag" (click)="checkRadio('Position Recon Flag')"></p-radioButton>
-
+          <p-radioButton name="group1" value="Trade Flag" label="Trade Flag" (click)="checkRadio('Trade Flag')"></p-radioButton>
+          <p-radioButton name="group1" value="Position Flag" label="Position Flag" (click)="checkRadio('Position Flag')"></p-radioButton>
+          <!--<p-checkbox name="group1" value="Trade Flag" label="Trade Flag" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>-->
         </div>
       </div>
     </div>
-        <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Calendar Type</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.calendarType = $event' [selectedItem]='calendarType'></app-dropdown>
-        </div>
-      </div>
-    </div>
-      <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Trade Fail Threshold Shares</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.tradeFailThresholdShares=$event' #inputtradeFailThresholdShares [value]='tradeFailThresholdShares' maxlength="60"></app-input>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-4 col-xs-4">
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Data Provider Description</label>
+          <label class="control-label">Clear Rep Code</label>
         </div>
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.dataProviderDescription=$event' #inputdataProviderDescription [value]='dataProviderDescription' maxlength="60"></app-input>
+          <app-input (inputTextSelected)='this.tradeFailThresholdShares=$event' #inputtradeFailThresholdShares [value]='tradeFailThresholdShares'
+            maxlength="60"></app-input>
         </div>
       </div>
     </div>
-        <div>
-      <div class="row paddingTopClass dishide">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Fund</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
-
-          <p-radioButton name="group1" value="Monthly Roll Forward Flag" label="Monthly Roll Forward Flag" (click)="checkRadio('Monthly Roll Forward Flag')"></p-radioButton>
-          <p-radioButton name="group1" value="Compare Diff Net Flag" label="Compare Diff Net Flag" (click)="checkRadio('Compare Diff Net Flag')"></p-radioButton>
-
-        </div>
-      </div>
-    </div>  
-      <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Pos Fail Threshold Percent</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.posFailThresholdPercent = $event' #inputposFailThresholdPercent [value]='posFailThresholdPercent' maxlength="60"></app-input>
-        </div>
-      </div>
-    </div>
-
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Pos Fail Threshold Shares</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.posFailThresholdShares = $event' #inputposFailThresholdShares [value]='posFailThresholdShares' maxlength="60"></app-input>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="col-lg-4 col-md-4 col-xs-4">
-    <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Recon Level</label>
+          <label class="control-label">Business Domain</label>
         </div>
       </div>
       <div class="row paddingDataClass">
@@ -125,16 +58,56 @@
         </div>
       </div>
     </div>
-      
-      <div>
-      <div class="row paddingTopClass">
+    <div>
+      <div class="row paddingTopClass dishide">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Trade Recon Type</label>
+          <label class="control-label">Fund</label>
         </div>
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.tradeReconType = $event' [selectedItem]='tradeReconType'></app-dropdown>
+
+          <p-radioButton name="group1" value="Position Flag" label="TA Omnibus Account Flag" (click)="checkRadio('Position Flag')"></p-radioButton>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-xs-3">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Data Provider</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconLevel = $event' [selectedItem]='reconLevel'></app-dropdown>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Clear Firm Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.posFailThresholdPercent = $event' #inputposFailThresholdPercent [value]='posFailThresholdPercent'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Fund Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconLevel = $event' [selectedItem]='reconLevel'></app-dropdown>
         </div>
       </div>
     </div>
@@ -142,20 +115,113 @@
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Trade Fail Threshold Percent</label>
+          <label class="control-label">Account Number Prefix</label>
         </div>
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.tradeFailThresholdPercent=$event' #inputtradeFailThresholdPercent [value]='tradeFailThresholdPercent' maxlength="60"></app-input>
+          <app-input (inputTextSelected)='this.posFailThresholdShares = $event' #inputposFailThresholdShares [value]='posFailThresholdShares'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-xs-3">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Active Status</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconLevel = $event' [selectedItem]='reconLevel'></app-dropdown>
         </div>
       </div>
     </div>
 
-        <div>
+    <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Active Status</label>
+          <label class="control-label">Clear Branch Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.tradeFailThresholdPercent=$event' #inputtradeFailThresholdPercent [value]='tradeFailThresholdPercent'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Product Line Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconLevel = $event' [selectedItem]='reconLevel'></app-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Social Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.activeStatus = $event' [selectedItem]='activeStatus'></app-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-3 col-xs-3">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Cumulative Discount Num</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.activeStatus = $event' [selectedItem]='activeStatus'></app-dropdown>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trans Code Prefix</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.activeStatus = $event' [selectedItem]='activeStatus'></app-dropdown>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Type Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.activeStatus = $event' [selectedItem]='activeStatus'></app-dropdown>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Flow Type Code</label>
         </div>
       </div>
       <div class="row paddingDataClass">

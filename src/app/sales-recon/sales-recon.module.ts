@@ -15,13 +15,15 @@ import { SystemValueComponent } from './maintenance/system-value/system-value.co
 import { TableModule } from 'primeng/table';
 import { AddDataProviderComponent } from './maintenance/data-provider/add-data-provider/add-data-provider.component';
 import { AddDataProviderAssignComponent } from './maintenance/data-provider-assign/add-data-provider-assign/add-data-provider-assign.component';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     RadioButtonModule,
-    TableModule
+    TableModule,
+    CheckboxModule
   ],
   declarations: [
     TradeReconciliationComponent,
