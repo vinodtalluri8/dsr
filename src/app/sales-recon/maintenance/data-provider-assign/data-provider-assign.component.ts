@@ -9,7 +9,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class DataProviderAssignComponent implements OnInit {
 
-sales;
+  sales;
   isPaginator;
   filterable;
   exportFileName;

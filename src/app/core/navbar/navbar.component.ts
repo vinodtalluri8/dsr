@@ -56,7 +56,7 @@ export class NavbarComponent implements OnInit {
         route: 'maintenance/dataproviderassign'
       },{
         displayName: 'SRS Timing Factor',
-        route: ''
+        route: 'maintenance/srstimingfactor'
       },{
         displayName: 'Trade Category',
         route: ''

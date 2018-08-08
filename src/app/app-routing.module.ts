@@ -10,6 +10,8 @@ import { DataProviderComponent } from "./sales-recon/maintenance/data-provider/d
 import { AddDataProviderComponent } from "./sales-recon/maintenance/data-provider/add-data-provider/add-data-provider.component";
 import { DataProviderAssignComponent } from "./sales-recon/maintenance/data-provider-assign/data-provider-assign.component";
 import { AddDataProviderAssignComponent } from "./sales-recon/maintenance/data-provider-assign/add-data-provider-assign/add-data-provider-assign.component";
+import { SrsTimingFactorComponent } from "./sales-recon/maintenance/srs-timing-factor/srs-timing-factor.component";
+import { AddSrsTimingFactorComponent } from "./sales-recon/maintenance/srs-timing-factor/add-srs-timing-factor/add-srs-timing-factor.component";
 
 const routes: Routes = [
   // { path:'salesRecon', component: SalesReconComponent, children:[
@@ -25,7 +27,9 @@ const routes: Routes = [
     { path: 'maintenance/dataprovider', component: DataProviderComponent},
     { path: 'maintenance/dataprovider/:type', component: AddDataProviderComponent},
     { path: 'maintenance/dataproviderassign', component: DataProviderAssignComponent},
-    { path: 'maintenance/dataproviderassign/:type', component: AddDataProviderAssignComponent}
+    { path: 'maintenance/dataproviderassign/:type', component: AddDataProviderAssignComponent},
+    { path: 'maintenance/srstimingfactor', component: SrsTimingFactorComponent},
+    { path: 'maintenance/srstimingfactor/:type', component: AddSrsTimingFactorComponent}
   ];
 
 @NgModule({
