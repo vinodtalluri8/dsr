@@ -33,7 +33,7 @@ export class DataProviderComponent implements OnInit {
 
     this.itemsPath = [
       { label: 'Maintenance'},
-      { label: 'Control Objectives Maintenance' }];
+      { label: 'Data Providers' }];
 
     this.displayRows = [{ label: '15', value: 15 },
     { label: '20', value: 20 }, { label: '30', value: 30 },

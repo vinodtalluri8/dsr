@@ -1,120 +1,129 @@
-<div class="text-center">
-  <h4>Search Roll Forward Recon Results</h4>
-</div>
-<div class="row">
-  <div class="col-lg-4 col-md-4 col-xs-4">
-    <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Data Provider</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.dataProvider = $event' [selectedItem]='dataProvider'></app-dropdown>
-        </div>
-      </div>
+<div class="panel panel-default" style="margin-left:-3px">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 padding-left-10">
+      <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
     </div>
-    <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Recon Status</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconStatus = $event' [selectedItem]='reconStatus'></app-dropdown>
-        </div>
-      </div>
-    </div>
+  </div>
+  <div class="panel-heading section-padding">
+    <h3 class="panel-title" style="font-size: 24px">Search Roll Forward Recon Results</h3>
+  </div>
+  <div class="panel-body section-padding">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-4">
         <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Fund Status</label>
+          <div class="row paddingTopClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Data Provider</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.dataProvider = $event' [selectedItem]='dataProvider'></app-dropdown>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.fundStatus = $event' [selectedItem]='fundStatus'></app-dropdown>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-4 col-xs-4">
-    <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">From Date</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
-          <app-calender id="calender" class="calWidth" (calenderSelected)='this.fromDate=$event' showIcon='true' yearNavigator='true' monthNavigator='true'
-            yearRange='2000:2030' [inputDate]='fromDate'></app-calender>
-        </div>
-      </div>
-    </div>
-  
         <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Fund / Product Code</label>
+          <div class="row paddingTopClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Recon Status</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.reconStatus = $event' [selectedItem]='reconStatus'></app-dropdown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="row paddingTopClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Fund Status</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.fundStatus = $event' [selectedItem]='fundStatus'></app-dropdown>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.productCode = $event' [selectedItem]='productCode'></app-dropdown>
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div>
+          <div class="row paddingTopClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">From Date</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
+              <app-calender id="calender" class="calWidth" (calenderSelected)='this.fromDate=$event' showIcon='true' yearNavigator='true'
+                monthNavigator='true' yearRange='2000:2030' [inputDate]='fromDate'></app-calender>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row paddingTopClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Fund / Product Code</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.productCode = $event' [selectedItem]='productCode'></app-dropdown>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="row paddingTopClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Sort By</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.sortBy = $event' [selectedItem]='sortBy'></app-dropdown>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div>
+          <div class="row paddingTopClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">To Date</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
+              <app-calender id="calender" class="calWidth" (calenderSelected)='this.toDate = $event' showIcon='true' yearNavigator='true'
+                monthNavigator='true' yearRange='2000:2030' [inputDate]='toDate'></app-calender>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row paddingTopClass dishide">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label class="control-label">Fund</label>
+            </div>
+          </div>
+          <div class="row paddingDataClass">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+
+              <p-radioButton name="group1" value="Implemented" label="Fund" (click)="checkRadio('fund')"></p-radioButton>
+              <p-radioButton name="group1" value="Will be Implemented" label="Product Code" (click)="checkRadio('implement')"></p-radioButton>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
-      <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Sort By</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.sortBy = $event' [selectedItem]='sortBy'></app-dropdown>
-        </div>
-      </div>
+    <div class="text-center">
+      <app-button (click)="saveData()" label="Reset" styleClass='button-action'></app-button>
+      <app-button (click)="saveData()" label="Go" styleClass='button-action'></app-button>
     </div>
   </div>
-    <div class="col-lg-4 col-md-4 col-xs-4">
-    <div>
-      <div class="row paddingTopClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">To Date</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
-          <app-calender id="calender" class="calWidth" (calenderSelected)='this.toDate = $event' showIcon='true' yearNavigator='true' monthNavigator='true'
-            yearRange='2000:2030' [inputDate]='toDate'></app-calender>
-        </div>
-      </div>
-    </div>
-      
-      <div>
-      <div class="row paddingTopClass dishide">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Fund</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-
-          <p-radioButton name="group1" value="Implemented" label="Fund" (click)="checkRadio('fund')"></p-radioButton>
-          <p-radioButton name="group1" value="Will be Implemented" label="Product Code" (click)="checkRadio('implement')"></p-radioButton>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="text-center">
-  <app-button (click)="saveData()" label="Reset" styleClass='button-action'></app-button>
-  <app-button (click)="saveData()" label="Go" styleClass='button-action'></app-button>
 </div>

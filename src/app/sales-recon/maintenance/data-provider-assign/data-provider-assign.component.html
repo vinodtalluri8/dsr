@@ -1,4 +1,11 @@
-<h3 class="panel-title text-center">Data Providers Assign</h3>
+<div class="panel panel-default" style="margin-left:-3px"></div>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12 padding-left-10">
+      <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
+  </div>
+  <div class="panel-heading section-padding">
+    <h3 class="panel-title" style="font-size: 24px">Data Providers Assign</h3>
+<div class="panel-heading section-padding">
 <div class="row">
   <label class="control-label">Filter</label>
   <div class="col-5">
@@ -59,4 +66,6 @@
 </div>
 <div *ngIf="!isPaginator">
   <app-dropdown [datasource]='displayRows' (selectedItemChange)='checkAndEnablePage($event)' [selectedItem]='selectedRows'></app-dropdown>
+</div>
+</div>
 </div>
