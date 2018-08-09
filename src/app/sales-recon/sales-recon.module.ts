@@ -17,6 +17,7 @@ import { AddDataProviderComponent } from './maintenance/data-provider/add-data-p
 import { AddDataProviderAssignComponent } from './maintenance/data-provider-assign/add-data-provider-assign/add-data-provider-assign.component';
 import {CheckboxModule} from 'primeng/checkbox';
 import { AddSrsTimingFactorComponent } from './maintenance/srs-timing-factor/add-srs-timing-factor/add-srs-timing-factor.component';
+import { AddTradeCategoryComponent } from './maintenance/trade-category/add-trade-category/add-trade-category.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { AddSrsTimingFactorComponent } from './maintenance/srs-timing-factor/add
     SystemValueComponent,
     AddDataProviderComponent,
     AddDataProviderAssignComponent,
-    AddSrsTimingFactorComponent
+    AddSrsTimingFactorComponent,
+    AddTradeCategoryComponent
   ]
 })
 export class SalesReconModule { }

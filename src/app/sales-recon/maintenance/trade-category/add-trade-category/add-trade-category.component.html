@@ -1,0 +1,94 @@
+<div class="text-center" *ngIf="formType == 'add'">
+  <h4>Add Trade Category</h4>
+</div>
+<div class="text-center" *ngIf="formType == 'edit'">
+  <h4>Edit Trade Category</h4>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-xs-4">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Category Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.tradeCategoryCode = $event' #inputtradeCategoryCode [value]='tradeCategoryCode'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Type Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.tradeTypeCode = $event' [selectedItem]='tradeTypeCode'></app-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <label for="title" class="control-label">Trade Recon Include Flag</label>
+        <p-checkbox name="group1" value="checked" label="" inputId="on"></p-checkbox>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <label for="title" class="control-label">Roll Fwd Include Flag</label>
+        <p-checkbox name="group1" value="checked" label="" inputId="on"></p-checkbox>
+      </div>
+    </div>
+
+    <div *ngIf="formType == 'edit'">
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Active Status</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.activeStatus = $event' [selectedItem]='activeStatus'></app-dropdown>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="col-lg-4 col-md-4 col-xs-4">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Category Description</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input-text-area rowSize='6' (inputTextAreaSelected)='this.tradeCategoryDescription= $event' [value]='tradeCategoryDescription' name='control'></app-input-text-area>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Flow Type Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.tradeFlowTypeCode = $event' [selectedItem]='tradeFlowTypeCode'></app-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="text-center">
+  <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
+  <app-button (click)="saveData()" [disabled]='disable()' label="Save" styleClass='button-action'></app-button>
+</div>

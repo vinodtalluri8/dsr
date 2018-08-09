@@ -59,7 +59,7 @@ export class NavbarComponent implements OnInit {
         route: 'maintenance/srstimingfactor'
       },{
         displayName: 'Trade Category',
-        route: ''
+        route: 'maintenance/tradecategory'
       },{
         displayName: 'System Value',
         route: ''
