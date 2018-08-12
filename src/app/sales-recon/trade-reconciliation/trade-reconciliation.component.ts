@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../services/mock-data.service";
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-trade-reconciliation',
@@ -18,8 +19,12 @@ export class TradeReconciliationComponent implements OnInit {
   toDate;
   sortBy;
   dataJson;
+  itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService) { }
+  constructor(private mockService : MockDataService) {
+        this.itemsPath = [
+      { label: 'Trade Reconciliation' }];
+   }
 
   ngOnInit() {
     this.preloadData();

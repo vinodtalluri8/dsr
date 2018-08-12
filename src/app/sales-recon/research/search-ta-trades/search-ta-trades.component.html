@@ -1,9 +1,9 @@
-<div class="panel panel-default" style="margin-left:-3px">
   <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12 padding-left-10">
+    <div class="col-sm-12 col-md-12 col-lg-12" style="margin-left:-8px">
       <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
     </div>
   </div>
+<div class="panel panel-default">
   <div class="panel-heading section-padding">
     <h3 class="panel-title" style="font-size: 24px">Filter TA Master Trade</h3>
   </div>
@@ -133,9 +133,12 @@
         </div>
       </div>
     </div>
-    <div class="text-center">
-      <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
-      <app-button (click)="saveData()" label="Go" styleClass='button-action'></app-button>
+    <br>
+    <div class="addCheckListButtons">
+      <div class="col-sm-8 col-md-8 col-lg-8">
+      <app-button (click)="saveData()" [disabled]='disable()' label="Search" styleClass='button-action'></app-button>
+      <app-button (click)="resetAll()" label="Clear All" styleClass='button-action'></app-button>
+      </div>
     </div>
   </div>
 </div>

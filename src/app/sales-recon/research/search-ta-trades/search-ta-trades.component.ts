@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../../services/mock-data.service";
+import { MenuItem } from "primeng/api";
 
 @Component({
   selector: 'app-search-ta-trades',
@@ -21,8 +22,14 @@ export class SearchTaTradesComponent implements OnInit {
     fundRadio;
     ProductRadio;
     dataJson;
+    itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService) { }
+  constructor(private mockService : MockDataService) {
+           this.itemsPath = [
+      { label: 'Research'},
+      { label: 'Search TA Trades'}
+      ];
+   }
 
   ngOnInit() {
     this.preloadData();

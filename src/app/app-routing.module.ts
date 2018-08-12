@@ -14,6 +14,8 @@ import { SrsTimingFactorComponent } from "./sales-recon/maintenance/srs-timing-f
 import { AddSrsTimingFactorComponent } from "./sales-recon/maintenance/srs-timing-factor/add-srs-timing-factor/add-srs-timing-factor.component";
 import { TradeCategoryComponent } from "./sales-recon/maintenance/trade-category/trade-category.component";
 import { AddTradeCategoryComponent } from "./sales-recon/maintenance/trade-category/add-trade-category/add-trade-category.component";
+import { SystemValueComponent } from "./sales-recon/maintenance/system-value/system-value.component";
+import { AddSystemValueComponent } from "./sales-recon/maintenance/system-value/add-system-value/add-system-value.component";
 
 const routes: Routes = [
   // { path:'salesRecon', component: SalesReconComponent, children:[
@@ -33,7 +35,9 @@ const routes: Routes = [
     { path: 'maintenance/srstimingfactor', component: SrsTimingFactorComponent},
     { path: 'maintenance/srstimingfactor/:type', component: AddSrsTimingFactorComponent},
     { path: 'maintenance/tradecategory', component: TradeCategoryComponent},
-    { path: 'maintenance/tradecategory/:type', component: AddTradeCategoryComponent}
+    { path: 'maintenance/tradecategory/:type', component: AddTradeCategoryComponent},
+    { path: 'maintenance/systemvalue', component: SystemValueComponent},
+    { path: 'maintenance/systemvalue/:type', component: AddSystemValueComponent}
   ];
 
 @NgModule({

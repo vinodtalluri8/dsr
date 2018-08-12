@@ -1,0 +1,148 @@
+<div class="text-center" *ngIf="formType == 'add'">
+  <h4>Add Sales Recon System Values</h4>
+</div>
+<div class="text-center" *ngIf="formType == 'edit'">
+  <h4>Edit Sales Recon System Values</h4>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-xs-4">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.code = $event' #inputcode [value]='code'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Value Char 2</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.valueChar2 = $event' #inputvalueChar2 [value]='valueChar2'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Value Num 2</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.valueNum2 = $event' #inputvalueNum2 [value]='valueNum2'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Active Status</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.activeStatus = $event' [selectedItem]='activeStatus'></app-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-xs-4">
+   <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Description</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.description = $event' #inputdescription [value]='description'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Value Char 3</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.valueChar3 = $event' #inputvalueChar3 [value]='valueChar3'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Value Num 3</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.valueNum3 = $event' #inputvalueNum3 [value]='valueNum3'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-xs-4">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Value Char 1</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.valueChar1 = $event' #inputvalueChar1 [value]='valueChar1'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Value Num 1</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.valueNum1 = $event' #inputvalueNum1 [value]='valueNum1'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Notes</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-input (inputTextSelected)='this.notes = $event' #inputnotes [value]='notes'
+            maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="text-center">
+  <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
+  <app-button (click)="saveData()" [disabled]='disable()' label="Save" styleClass='button-action'></app-button>
+</div>

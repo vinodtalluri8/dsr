@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../../services/mock-data.service";
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-search-srs-trades',
@@ -7,29 +8,35 @@ import { MockDataService } from "../../../services/mock-data.service";
   styleUrls: ['./search-srs-trades.component.css']
 })
 export class SearchSrsTradesComponent implements OnInit {
-    
-   
-    mockMultiDropDownData;
-    mockDropDownData;
-    dataProvider;
-    reportedFlag;
-    batchId;
-    taPostDate;
-    productCode;
-    serialId;
-    tradeType;
-    clearFirmCode;
-    fundRadio;
-    ProductRadio;
-    dataJson;
 
-  constructor(private mockService : MockDataService) { }
+
+  mockMultiDropDownData;
+  mockDropDownData;
+  dataProvider;
+  reportedFlag;
+  batchId;
+  taPostDate;
+  productCode;
+  serialId;
+  tradeType;
+  clearFirmCode;
+  fundRadio;
+  ProductRadio;
+  dataJson;
+  itemsPath: MenuItem[];
+
+  constructor(private mockService: MockDataService) {
+    this.itemsPath = [
+      { label: 'Research' },
+      { label: 'Search SRS Trades' }
+    ];
+  }
 
   ngOnInit() {
     this.preloadData();
   }
 
-    preloadData() {
+  preloadData() {
     this.mockService.getDropdownData().subscribe(
       (data) => {
         this.mockDropDownData = data;
@@ -43,15 +50,15 @@ export class SearchSrsTradesComponent implements OnInit {
   }
 
   disable() {
-    if ( !this.dataProvider || !this.reportedFlag || !this.batchId || !this.taPostDate || !this.productCode || !this.serialId || !this.tradeType || !this.clearFirmCode) {
+    if (!this.dataProvider || !this.reportedFlag || !this.batchId || !this.taPostDate || !this.productCode || !this.serialId || !this.tradeType || !this.clearFirmCode) {
       return true;
     } else {
       return false;
     }
   }
 
-  saveData(){
-        if (!this.disable()) {
+  saveData() {
+    if (!this.disable()) {
       this.dataJson = {
         'dataProvider': this.dataProvider,
         'reportedFlag': this.reportedFlag,
@@ -64,18 +71,18 @@ export class SearchSrsTradesComponent implements OnInit {
       };
     }
 
-    console.log('dataJson',this.dataJson);
+    console.log('dataJson', this.dataJson);
   }
 
-  resetAll(){
-         this.dataProvider = '';
-         this.reportedFlag = '';
-         this.batchId = '';
-         this.taPostDate = new Date();
-         this.productCode = '';
-         this.serialId = '';
-         this.tradeType = '';
-         this.clearFirmCode = '';
+  resetAll() {
+    this.dataProvider = '';
+    this.reportedFlag = '';
+    this.batchId = '';
+    this.taPostDate = new Date();
+    this.productCode = '';
+    this.serialId = '';
+    this.tradeType = '';
+    this.clearFirmCode = '';
   }
 
 

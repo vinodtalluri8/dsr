@@ -4,3 +4,18 @@
     min-width: 16px !important;
 }
 
+label.required:after {
+    content: " *";
+    color: red;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444444;
+    font-style: normal;
+    text-align: left;
+    padding-top: 15px !important;
+    padding-bottom: 0px !important;
+}
+

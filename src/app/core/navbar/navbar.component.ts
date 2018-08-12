@@ -62,7 +62,7 @@ export class NavbarComponent implements OnInit {
         route: 'maintenance/tradecategory'
       },{
         displayName: 'System Value',
-        route: ''
+        route: 'maintenance/systemvalue'
       }]      
     },
   ];

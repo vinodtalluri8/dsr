@@ -1,8 +1,10 @@
-<div class="text-center" *ngIf="formType == 'add'">
-  <h4>Add Sales Recon Data Providers</h4>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12" style="margin-left:-8px">
+    <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
+  </div>
 </div>
-<div class="text-center" *ngIf="formType == 'edit'">
-  <h4>Edit Sales Recon Data Providers</h4>
+<div class="panel-heading section-padding">
+  <h3 class="panel-title" style="font-size: 24px">{{header}}</h3>
 </div>
 <div class="row">
   <div class="col-lg-4 col-md-4 col-xs-4">
@@ -18,7 +20,7 @@
         </div>
       </div>
     </div>
-      <div>
+    <div>
       <div class="row paddingTopClass dishide">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Fund</label>
@@ -33,7 +35,7 @@
         </div>
       </div>
     </div>
-        <div>
+    <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Calendar Type</label>
@@ -45,7 +47,7 @@
         </div>
       </div>
     </div>
-      <div>
+    <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Trade Fail Threshold Shares</label>
@@ -53,7 +55,8 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.tradeFailThresholdShares=$event' #inputtradeFailThresholdShares [value]='tradeFailThresholdShares' maxlength="60"></app-input>
+          <app-input (inputTextSelected)='this.tradeFailThresholdShares=$event' #inputtradeFailThresholdShares [value]='tradeFailThresholdShares'
+            maxlength="60"></app-input>
         </div>
       </div>
     </div>
@@ -67,11 +70,12 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.dataProviderDescription=$event' #inputdataProviderDescription [value]='dataProviderDescription' maxlength="60"></app-input>
+          <app-input (inputTextSelected)='this.dataProviderDescription=$event' #inputdataProviderDescription [value]='dataProviderDescription'
+            maxlength="60"></app-input>
         </div>
       </div>
     </div>
-        <div>
+    <div>
       <div class="row paddingTopClass dishide">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Fund</label>
@@ -85,8 +89,8 @@
 
         </div>
       </div>
-    </div>  
-      <div>
+    </div>
+    <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Pos Fail Threshold Percent</label>
@@ -94,7 +98,8 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.posFailThresholdPercent = $event' #inputposFailThresholdPercent [value]='posFailThresholdPercent' maxlength="60"></app-input>
+          <app-input (inputTextSelected)='this.posFailThresholdPercent = $event' #inputposFailThresholdPercent [value]='posFailThresholdPercent'
+            maxlength="60"></app-input>
         </div>
       </div>
     </div>
@@ -107,12 +112,13 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.posFailThresholdShares = $event' #inputposFailThresholdShares [value]='posFailThresholdShares' maxlength="60"></app-input>
+          <app-input (inputTextSelected)='this.posFailThresholdShares = $event' #inputposFailThresholdShares [value]='posFailThresholdShares'
+            maxlength="60"></app-input>
         </div>
       </div>
     </div>
   </div>
-    <div class="col-lg-4 col-md-4 col-xs-4">
+  <div class="col-lg-4 col-md-4 col-xs-4">
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -125,8 +131,8 @@
         </div>
       </div>
     </div>
-      
-      <div>
+
+    <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Trade Recon Type</label>
@@ -147,12 +153,13 @@
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-input (inputTextSelected)='this.tradeFailThresholdPercent=$event' #inputtradeFailThresholdPercent [value]='tradeFailThresholdPercent' maxlength="60"></app-input>
+          <app-input (inputTextSelected)='this.tradeFailThresholdPercent=$event' #inputtradeFailThresholdPercent [value]='tradeFailThresholdPercent'
+            maxlength="60"></app-input>
         </div>
       </div>
     </div>
 
-        <div>
+    <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">Active Status</label>
@@ -167,8 +174,9 @@
   </div>
 
 </div>
-<br>
-<div class="text-center">
-  <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
+<div class="addCheckListButtons">
+  <div class="col-sm-8 col-md-8 col-lg-8">
   <app-button (click)="saveData()" [disabled]='disable()' label="Save" styleClass='button-action'></app-button>
+  <app-button (click)="resetAll()" label="Clear All" styleClass='button-action'></app-button>
+</div>
 </div>
