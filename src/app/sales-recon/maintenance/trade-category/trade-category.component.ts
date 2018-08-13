@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -52,9 +52,24 @@ export class TradeCategoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedFilter = "Active Only"
+    this.selectedFilter = 'Active Only';
     this.sales = [
       { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+      { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
+            { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
       { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
       { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },
       { categoryCode: 'AAAAAA', categoryDescription: 'This is description', typeCode: 'Y', flowType: 'Y', includeOnTradeRecon: 'Y', includeOnRollForward: 'Y', activeFlag: 'Y', a: '' },

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MockDataService } from "../../../../services/mock-data.service";
+import { MockDataService } from '../../../../services/mock-data.service';
 import { Router, ActivatedRoute, RouterLink, UrlSegment } from '@angular/router';
-import { MenuItem } from "primeng/api";
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-add-data-provider',
@@ -27,23 +27,22 @@ export class AddDataProviderComponent implements OnInit {
   header;
   itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService, private route: ActivatedRoute) {
+  constructor(private mockService: MockDataService, private route: ActivatedRoute) {
    }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.formType = params['type'];
-    })
-    if( this.formType == 'add'){
-      this.header = "Add Sales Recon Data Providers";
+    });
+    if ( this.formType == 'add') {
+      this.header = 'Add Sales Recon Data Providers';
       this.itemsPath = [
       { label: 'Maintenance'},
       { label: 'Data Provider'},
       { label: 'Add Data Provider'}
       ];
-    }
-    else{
-      this.header = "Edit Sales Recon Data Providers";
+    } else {
+      this.header = 'Edit Sales Recon Data Providers';
       this.itemsPath = [
       { label: 'Maintenance'},
       { label: 'Data Provider'},
@@ -74,7 +73,7 @@ export class AddDataProviderComponent implements OnInit {
     }
   }
 
-  saveData(){
+  saveData() {
         if (!this.disable()) {
       this.dataJson = {
         'dataProviderCode': this.dataProviderCode,
@@ -90,14 +89,14 @@ export class AddDataProviderComponent implements OnInit {
       };
     }
 
-    console.log('dataJson',this.dataJson);
+    console.log('dataJson', this.dataJson);
   }
 
-  resetAll(){
+  resetAll() {
       this.dataProviderCode = '';
       this.calendarType = '';
       this.tradeFailThresholdShares = '';
-      this.dataProviderDescription = ''; 
+      this.dataProviderDescription = '';
       this.posFailThresholdPercent = '';
       this.posFailThresholdShares = '';
       this.reconLevel = '';
@@ -105,5 +104,9 @@ export class AddDataProviderComponent implements OnInit {
       this.tradeFailThresholdPercent = '';
       this.activeStatus = '';
   }
+
+    checkRadio(data) {
+  console.log(data);
+}
 
 }

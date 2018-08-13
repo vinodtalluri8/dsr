@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -23,7 +23,7 @@ export class SystemValueComponent implements OnInit {
   selectedProgram;
   selectedFilter;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
      this.isPaginator = true;
     this.filterable = true;
     this.exportFileName = 'Checklists Scheduled';
@@ -55,7 +55,7 @@ export class SystemValueComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedFilter = "Active Only"
+    this.selectedFilter = 'Active Only';
     this.sales = [
             {code:'AAAAAA',description:'This is description',valueChar1:'Y',valueChar2:'Y',valueChar3:'Y',valueNum1:'Y',valueNum2:'Y',valueNum3:'Y',notes:'aaaaaa',activeStatus:'Y',a:''},
             {code:'AAAAAA',description:'This is description',valueChar1:'Y',valueChar2:'Y',valueChar3:'Y',valueNum1:'Y',valueNum2:'Y',valueNum3:'Y',notes:'aaaaaa',activeStatus:'Y',a:''},
@@ -106,10 +106,10 @@ export class SystemValueComponent implements OnInit {
     // console.log(' mesagepage ', this.msgs);
   }
 
-  addNew(){
+  addNew() {
     this.router.navigate(['/maintenance/systemvalue/add']);
   }
-  editDataProvider(){
+  editDataProvider() {
     this.router.navigate(['/maintenance/systemvalue/edit']);
   }
 

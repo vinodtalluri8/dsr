@@ -51,14 +51,14 @@
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">From Date</label>
+          <label class="control-label">Date</label>
         </div>
       </div>
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
-          <app-calender id="calender" class="calWidth" (calenderSelected)='this.fromDate=$event' showIcon='true' yearNavigator='true' monthNavigator='true'
-            yearRange='2000:2030' [inputDate]='fromDate'></app-calender>
+          <app-calender id="calender" class="calWidth" (calenderSelected)='this.startdate=$event' showIcon='true' yearNavigator='true' monthNavigator='true'
+            yearRange='2000:2030' [inputDate]='startdate'></app-calender>
         </div>
       </div>
     </div>
@@ -89,20 +89,20 @@
     </div>
   </div>
     <div class="col-lg-4 col-md-4 col-xs-4">
-    <div>
+    <!--<div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <label class="control-label">To Date</label>
         </div>
       </div>
       <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-12 col-lg-12">-->
           <!--<app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedTitle = $event' [selectedItem]='selectedTitle'></app-dropdown>-->
-          <app-calender id="calender" class="calWidth" (calenderSelected)='this.toDate = $event' showIcon='true' yearNavigator='true' monthNavigator='true'
+          <!--<app-calender id="calender" class="calWidth" (calenderSelected)='this.toDate = $event' showIcon='true' yearNavigator='true' monthNavigator='true'
             yearRange='2000:2030' [inputDate]='toDate'></app-calender>
         </div>
       </div>
-    </div>
+    </div>-->
       
       <div>
       <div class="row paddingTopClass dishide">
@@ -121,8 +121,12 @@
     </div>
   </div>
 </div>
-<div class="text-center">
-  <app-button (click)="saveData()" label="Go" styleClass='button-action'></app-button>
-</div>
+<br>
+ <div class="row addCheckListButtons">
+      <div class="col-sm-8 col-md-8 col-lg-8">
+        <app-button (click)="saveData()" [disabled]='disable()' label="Search" styleClass='button-action'></app-button>
+        <app-button (click)="resetAll()" label="Clear All" styleClass='button-action'></app-button>
+      </div>
+    </div>
   </div>
   </div>

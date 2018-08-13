@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -23,7 +23,7 @@ export class DataProviderAssignComponent implements OnInit {
   selectedProgram;
   selectedFilter;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
      this.isPaginator = true;
     this.filterable = true;
     this.exportFileName = 'Checklists Scheduled';
@@ -63,24 +63,24 @@ export class DataProviderAssignComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedFilter = "Active Only"
+    this.selectedFilter = 'Active Only';
     this.sales = [
-      {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''},
-            {code:'AAAAAA',description:'This is description',dailyTradeReconFlag:'Y',tradeReconFlag:'Y',monthlyRollFwdFlag:'Y',tradeFailThresholdPercent:'0.25',posFailThresholdPercent:'0.25',tradeFailThresholdShares:'10.0',posFailThresholdShares:'10.0',activeFlag:'Y',a:''}
+      {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''},
+            {code: 'AAAAAA', description: 'This is description', dailyTradeReconFlag: 'Y', tradeReconFlag: 'Y', monthlyRollFwdFlag: 'Y', tradeFailThresholdPercent: '0.25', posFailThresholdPercent: '0.25', tradeFailThresholdShares: '10.0', posFailThresholdShares: '10.0', activeFlag: 'Y', a: ''}
            ];
 
   }
@@ -95,10 +95,10 @@ export class DataProviderAssignComponent implements OnInit {
     // console.log(' mesagepage ', this.msgs);
   }
 
-  addNew(){
+  addNew() {
     this.router.navigate(['/maintenance/dataproviderassign/add']);
   }
-  editDataProvider(){
+  editDataProvider() {
     this.router.navigate(['/maintenance/dataproviderassign/edit']);
   }
 }

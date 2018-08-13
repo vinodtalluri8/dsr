@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MockDataService } from "../../services/mock-data.service";
+import { MockDataService } from '../../services/mock-data.service';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -21,7 +21,7 @@ export class TradeReconciliationComponent implements OnInit {
   dataJson;
   itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService) {
+  constructor(private mockService: MockDataService) {
         this.itemsPath = [
       { label: 'Trade Reconciliation' }];
    }
@@ -51,7 +51,7 @@ export class TradeReconciliationComponent implements OnInit {
     }
   }
 
-  saveData(){
+  saveData() {
         if (!this.disable()) {
       this.dataJson = {
         'dataProvider': this.dataProvider,
@@ -64,17 +64,19 @@ export class TradeReconciliationComponent implements OnInit {
       };
     }
 
-    console.log('dataJson',this.dataJson);
+    console.log('dataJson', this.dataJson);
   }
 
-  resetAll(){
+  resetAll() {
         this.dataProvider = '';
-        this.reconStatus= '';
-        this.fundStatus= '';
-        this.fromDate= new Date();
-        this.productCode= '';
-        this.toDate= new Date();
-        this.sortBy= '';
+        this.reconStatus = '';
+        this.fundStatus = '';
+        this.fromDate = new Date();
+        this.productCode = '';
+        this.toDate = new Date();
+        this.sortBy = '';
   }
-
+checkRadio(data) {
+  console.log(data);
+}
 }

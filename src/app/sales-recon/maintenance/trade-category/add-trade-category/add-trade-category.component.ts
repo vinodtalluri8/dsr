@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MockDataService } from "../../../../services/mock-data.service";
-import { ActivatedRoute } from "@angular/router";
+import { MockDataService } from '../../../../services/mock-data.service';
+import { ActivatedRoute } from '@angular/router';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-add-trade-category',
@@ -18,13 +19,30 @@ export class AddTradeCategoryComponent implements OnInit {
   tradeFlowTypeCode;
   dataJson;
   formType;
+  header;
+  itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService, private route: ActivatedRoute) { }
+  constructor(private mockService: MockDataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.formType = params['type'];
-    })
+    });
+                if ( this.formType == 'add') {
+      this.header = 'Add Trade Category';
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'Trade Category'},
+      { label: 'Add Trade Category'}
+      ];
+    } else {
+      this.header = 'Edit Trade Category';
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'Trade Category'},
+      { label: 'Edit Trade Category'}
+      ];
+    }
     this.preloadData();
   }
 
@@ -49,7 +67,7 @@ export class AddTradeCategoryComponent implements OnInit {
     }
   }
 
-  saveData(){
+  saveData() {
         if (!this.disable()) {
       this.dataJson = {
           'tradeCategoryCode' : this.tradeCategoryCode,
@@ -60,10 +78,10 @@ export class AddTradeCategoryComponent implements OnInit {
       };
     }
 
-    console.log('dataJson',this.dataJson);
+    console.log('dataJson', this.dataJson);
   }
 
-  resetAll(){
+  resetAll() {
       this.tradeCategoryCode = '';
       this.tradeTypeCode = '';
       this.activeStatus = '';

@@ -41,7 +41,7 @@ export class NavbarComponent implements OnInit {
       children : [{
         displayName: 'Search SRS Trades',
         route: 'research/srstrades'
-      },{
+      }, {
         displayName: 'Search TA Trades',
         route: 'research/tatrades'
       }]
@@ -51,19 +51,19 @@ export class NavbarComponent implements OnInit {
       children : [{
         displayName: 'Data Provider',
         route: 'maintenance/dataprovider'
-      },{
+      }, {
         displayName: 'Data Provider Assign',
         route: 'maintenance/dataproviderassign'
-      },{
+      }, {
         displayName: 'SRS Timing Factor',
         route: 'maintenance/srstimingfactor'
-      },{
+      }, {
         displayName: 'Trade Category',
         route: 'maintenance/tradecategory'
-      },{
+      }, {
         displayName: 'System Value',
         route: 'maintenance/systemvalue'
-      }]      
+      }]
     },
   ];
   ngOnInit() {

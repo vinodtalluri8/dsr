@@ -121,9 +121,15 @@
         </div>
       </div>
     </div>
-    <div class="text-center">
+     <div class="row addCheckListButtons">
+      <div class="col-sm-8 col-md-8 col-lg-8">
+        <app-button (click)="saveData()" [disabled]='disable()' label="Search" styleClass='button-action'></app-button>
+        <app-button (click)="resetAll()" label="Clear All" styleClass='button-action'></app-button>
+      </div>
+    </div>
+    <!--<div class="text-center">
       <app-button (click)="saveData()" label="Reset" styleClass='button-action'></app-button>
       <app-button (click)="saveData()" label="Go" styleClass='button-action'></app-button>
-    </div>
+    </div>-->
   </div>
 </div>

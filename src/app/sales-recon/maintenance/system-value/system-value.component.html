@@ -1,20 +1,26 @@
-<div class="panel panel-default" style="margin-left:-3px"></div>
-<div class="row">
-  <div class="col-sm-12 col-md-12 col-lg-12 padding-left-10">
+<div class="panel panel-default" style="margin-left:-3px">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12" style="margin-left:-5px">
       <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
+    </div>
   </div>
   <div class="panel-heading section-padding">
     <h3 class="panel-title" style="font-size: 24px">Sales Recon System Values</h3>
-<div class="panel-heading section-padding">
-<div class="row">
-  <label class="control-label">Filter</label>
-  <div class="col-5">
-    <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedFilter = $event' [selectedItem]='selectedFilter'></app-dropdown>
+  </div>
+  <div class="row">
+    <div class="col-sm-1 col-md-1 col-lg-1">
+      <label class="control-label">Filter</label>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 filter-dropdown-pos">
+      <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.selectedFilter = $event' [selectedItem]='selectedFilter'></app-dropdown>
+    </div>
+    <div class="col-sm-5 col-md-5 col-lg-5 align-right">
+      <app-button label='Add New' (click)="addNew()" styleClass='button-action'></app-button>
+    </div>
   </div>
 </div>
-<div class="align-right">
-  <app-button label='Add New' (click)="addNew()" styleClass='button-action'></app-button>
-</div>
+<br>
+
 <div>
 
   <p-table #scr [columns]="colHeaders" [value]="sales" [responsive]="true" [paginator]="true" [rows]="selectedRows" [alwaysShowPaginator]="false"
@@ -46,7 +52,7 @@
         <td class="text-center">{{car.notes}}</td>
         <td class="text-center">{{car.activeStatus}}</td>
         <td class="text-center">
-          <app-button class="editButton" label='Edit' (click)="editDataProvider()" styleClass='button-action'></app-button>
+          <app-button class="editButton" label='Modify' (click)="editDataProvider()" styleClass='button-action'></app-button>
         </td>
       </tr>
     </ng-template>
@@ -58,5 +64,5 @@
 <div *ngIf="!isPaginator">
   <app-dropdown [datasource]='displayRows' (selectedItemChange)='checkAndEnablePage($event)' [selectedItem]='selectedRows'></app-dropdown>
 </div>
-</div>
-</div>
+<!--</div>
+</div>-->

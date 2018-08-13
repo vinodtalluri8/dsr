@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MockDataService } from "../../../services/mock-data.service";
-import { MenuItem } from "primeng/api";
+import { MockDataService } from '../../../services/mock-data.service';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-search-ta-trades',
@@ -24,7 +24,7 @@ export class SearchTaTradesComponent implements OnInit {
     dataJson;
     itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService) {
+  constructor(private mockService: MockDataService) {
            this.itemsPath = [
       { label: 'Research'},
       { label: 'Search TA Trades'}
@@ -56,7 +56,7 @@ export class SearchTaTradesComponent implements OnInit {
     }
   }
 
-  saveData(){
+  saveData() {
         if (!this.disable()) {
       this.dataJson = {
         'dataProvider': this.dataProvider,
@@ -70,10 +70,10 @@ export class SearchTaTradesComponent implements OnInit {
       };
     }
 
-    console.log('dataJson',this.dataJson);
+    console.log('dataJson', this.dataJson);
   }
 
-  resetAll(){
+  resetAll() {
          this.dataProvider = '';
          this.reportedFlag = '';
          this.batchId = '';
@@ -84,5 +84,8 @@ export class SearchTaTradesComponent implements OnInit {
          this.clearFirmCode = '';
   }
 
+  checkRadio(data) {
+  console.log(data);
+}
 
 }

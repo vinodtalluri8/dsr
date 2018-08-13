@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../../../services/mock-data.service";
 import { ActivatedRoute } from "@angular/router";
+import { MenuItem } from "primeng/api";
 
 @Component({
   selector: 'app-add-system-value',
@@ -23,6 +24,8 @@ export class AddSystemValueComponent implements OnInit {
   valueChar1;
   valueNum1;
   notes;
+  header;
+  itemsPath: MenuItem[];
 
   constructor(private mockService : MockDataService, private route: ActivatedRoute) { }
 
@@ -30,6 +33,22 @@ export class AddSystemValueComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.formType = params['type'];
     })
+                    if( this.formType == 'add'){
+      this.header = "Add Trade Category";
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'Trade Category'},
+      { label: 'Add Trade Category'}
+      ];
+    }
+    else{
+      this.header = "Edit Trade Category";
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'Trade Category'},
+      { label: 'Edit Trade Category'}
+      ];
+    }
     this.preloadData();
   }
 

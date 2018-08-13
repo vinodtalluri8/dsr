@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -23,7 +23,7 @@ export class SrsTimingFactorComponent implements OnInit {
   selectedProgram;
   selectedFilter;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
      this.isPaginator = true;
     this.filterable = true;
     this.exportFileName = 'Checklists Scheduled';
@@ -50,42 +50,42 @@ export class SrsTimingFactorComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedFilter = "Active Only"
+    this.selectedFilter = 'Active Only';
     this.sales = [
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''},
-            {dataprovidercode:'AAAAAA',tradetype:'This is description',tradePostTimingFactor:'Y',posSettleTimingFactor:'Y',activeFlag:'Y',a:''}
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''},
+            {dataprovidercode: 'AAAAAA', tradetype: 'This is description', tradePostTimingFactor: 'Y', posSettleTimingFactor: 'Y', activeFlag: 'Y', a: ''}
            ];
 
   }
@@ -100,10 +100,10 @@ export class SrsTimingFactorComponent implements OnInit {
     // console.log(' mesagepage ', this.msgs);
   }
 
-  addNew(){
+  addNew() {
     this.router.navigate(['/maintenance/srstimingfactor/add']);
   }
-  editDataProvider(){
+  editDataProvider() {
     this.router.navigate(['/maintenance/srstimingfactor/edit']);
   }
 

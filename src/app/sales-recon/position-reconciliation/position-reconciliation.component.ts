@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { MockDataService } from "../../services/mock-data.service";
+import { MockDataService } from '../../services/mock-data.service';
 
 @Component({
   selector: 'app-position-reconciliation',
@@ -10,21 +10,20 @@ import { MockDataService } from "../../services/mock-data.service";
 })
 export class PositionReconciliationComponent implements OnInit {
 
-mockDropDownData;
+  mockDropDownData;
   mockMultiDropDownData;
   dataProvider;
   reconStatus;
   fundStatus;
-  fromDate;
   productCode;
-  toDate;
+  startdate;
   sortBy;
   dataJson;
   itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService) {
+  constructor(private mockService: MockDataService) {
         this.itemsPath = [
-      { label: 'Trade Reconciliation' }];
+      { label: 'Position Reconciliation' }];
    }
 
   ngOnInit() {
@@ -45,37 +44,39 @@ mockDropDownData;
   }
 
   disable() {
-    if ( !this.dataProvider || !this.reconStatus || !this.fundStatus || !this.fromDate || !this.productCode || !this.toDate || !this.sortBy) {
+    if ( !this.dataProvider || !this.reconStatus || !this.fundStatus || !this.startdate || !this.productCode || !this.sortBy) {
       return true;
     } else {
       return false;
     }
   }
 
-  saveData(){
+  saveData() {
         if (!this.disable()) {
       this.dataJson = {
         'dataProvider': this.dataProvider,
         'reconStatus': this.reconStatus,
         'fundStatus': this.fundStatus,
-        'fromDate': this.fromDate.toString(),
+        'fromDate': this.startdate.toString(),
         'productCode': this.productCode,
-        'toDate': this.toDate.toString(),
         'sortBy': this.sortBy
       };
     }
 
-    console.log('dataJson',this.dataJson);
+    console.log('dataJson', this.dataJson);
   }
 
-  resetAll(){
+  resetAll() {
         this.dataProvider = '';
-        this.reconStatus= '';
-        this.fundStatus= '';
-        this.fromDate= new Date();
-        this.productCode= '';
-        this.toDate= new Date();
-        this.sortBy= '';
+        this.reconStatus = '';
+        this.fundStatus = '';
+        this.startdate = new Date();
+        this.productCode = '';
+        this.sortBy = '';
   }
+
+  checkRadio(data) {
+  console.log(data);
+}
 
 }

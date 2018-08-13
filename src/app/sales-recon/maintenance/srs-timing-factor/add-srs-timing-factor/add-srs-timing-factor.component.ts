@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MockDataService } from "../../../../services/mock-data.service";
-import { ActivatedRoute } from "@angular/router";
-import { MenuItem } from "primeng/api";
+import { MockDataService } from '../../../../services/mock-data.service';
+import { ActivatedRoute } from '@angular/router';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-add-srs-timing-factor',
@@ -21,22 +21,21 @@ export class AddSrsTimingFactorComponent implements OnInit {
   header;
   itemsPath: MenuItem[];
 
-  constructor(private mockService : MockDataService, private route: ActivatedRoute) { }
+  constructor(private mockService: MockDataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.formType = params['type'];
-    })
-            if( this.formType == 'add'){
-      this.header = "Add SRS Timing Factor";
+    });
+            if ( this.formType == 'add') {
+      this.header = 'Add SRS Timing Factor';
       this.itemsPath = [
       { label: 'Maintenance'},
       { label: 'SRS Timing Factor'},
       { label: 'Add SRS Timing Factor'}
       ];
-    }
-    else{
-      this.header = "Edit SRS Timing Factor";
+    } else {
+      this.header = 'Edit SRS Timing Factor';
       this.itemsPath = [
       { label: 'Maintenance'},
       { label: 'SRS Timing Factor'},
@@ -67,7 +66,7 @@ export class AddSrsTimingFactorComponent implements OnInit {
     }
   }
 
-  saveData(){
+  saveData() {
         if (!this.disable()) {
       this.dataJson = {
           'dataProvider' : this.dataProvider,
@@ -77,10 +76,10 @@ export class AddSrsTimingFactorComponent implements OnInit {
       };
     }
 
-    console.log('dataJson',this.dataJson);
+    console.log('dataJson', this.dataJson);
   }
 
-  resetAll(){
+  resetAll() {
       this.dataProvider = '';
       this.tradeTypeCode = '';
       this.tradePostTimingFactor = '';
