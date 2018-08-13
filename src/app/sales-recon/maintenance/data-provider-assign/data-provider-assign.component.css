@@ -1,7 +1,7 @@
 /*::ng-deep .editButton{*/
-/deep/ .ui-button {
+/deep/ td .ui-button {
     height: 28px !important;
-    min-width: 16px !important;
+    min-width: 50% !important;
 }
 
 label.required:after {

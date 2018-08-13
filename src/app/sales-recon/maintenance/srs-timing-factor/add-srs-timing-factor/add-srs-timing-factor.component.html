@@ -1,9 +1,17 @@
-<div class="text-center" *ngIf="formType == 'add'">
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12" style="margin-left:-8px">
+    <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
+  </div>
+</div>
+<div class="panel-heading section-padding">
+  <h3 class="panel-title" style="font-size: 24px">{{header}}</h3>
+</div>
+<!--<div class="text-center" *ngIf="formType == 'add'">
   <h4>Add SRS Timing Factor</h4>
 </div>
 <div class="text-center" *ngIf="formType == 'edit'">
   <h4>Edit SRS Timing Factor</h4>
-</div>
+</div>-->
 <div class="row">
   <div class="col-lg-3 col-md-3 col-xs-3">
     <div>
@@ -63,7 +71,9 @@
   </div>
 </div>
 <br>
-<div class="text-center">
-  <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
+<div class="addCheckListButtons">
+   <div class="col-sm-8 col-md-8 col-lg-8">
   <app-button (click)="saveData()" [disabled]='disable()' label="Save" styleClass='button-action'></app-button>
+  <app-button (click)="resetAll()" label="Clear All" styleClass='button-action'></app-button>
+   </div>
 </div>

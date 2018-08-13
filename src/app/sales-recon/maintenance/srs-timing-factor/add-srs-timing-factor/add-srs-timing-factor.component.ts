@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../../../services/mock-data.service";
 import { ActivatedRoute } from "@angular/router";
+import { MenuItem } from "primeng/api";
 
 @Component({
   selector: 'app-add-srs-timing-factor',
@@ -17,6 +18,8 @@ export class AddSrsTimingFactorComponent implements OnInit {
   posSettleTimingFactor;
   dataJson;
   formType;
+  header;
+  itemsPath: MenuItem[];
 
   constructor(private mockService : MockDataService, private route: ActivatedRoute) { }
 
@@ -24,6 +27,22 @@ export class AddSrsTimingFactorComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.formType = params['type'];
     })
+            if( this.formType == 'add'){
+      this.header = "Add SRS Timing Factor";
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'SRS Timing Factor'},
+      { label: 'Add SRS Timing Factor'}
+      ];
+    }
+    else{
+      this.header = "Edit SRS Timing Factor";
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'SRS Timing Factor'},
+      { label: 'Edit SRS Timing Factor'}
+      ];
+    }
     this.preloadData();
   }
 

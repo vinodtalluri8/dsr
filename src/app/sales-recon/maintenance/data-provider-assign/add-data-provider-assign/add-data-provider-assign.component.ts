@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MockDataService } from "../../../../services/mock-data.service";
 import { ActivatedRoute } from "@angular/router";
+import { MenuItem } from "primeng/api";
 
 @Component({
   selector: 'app-add-data-provider-assign',
@@ -23,6 +24,8 @@ export class AddDataProviderAssignComponent implements OnInit {
   activeStatus;
   dataJson;
   formType;
+  header;
+  itemsPath: MenuItem[];
 
   constructor(private mockService : MockDataService, private route: ActivatedRoute) { }
 
@@ -30,6 +33,22 @@ export class AddDataProviderAssignComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.formType = params['type'];
     })
+        if( this.formType == 'add'){
+      this.header = "Add Sales Recon Data Providers Assign";
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'Data Provider Assign'},
+      { label: 'Add Sales Recon Data Providers Assign'}
+      ];
+    }
+    else{
+      this.header = "Edit Sales Recon Data Providers Assign";
+      this.itemsPath = [
+      { label: 'Maintenance'},
+      { label: 'Data Provider'},
+      { label: 'Edit Sales Recon Data Providers Assign'}
+      ];
+    }
     this.preloadData();
   }
 

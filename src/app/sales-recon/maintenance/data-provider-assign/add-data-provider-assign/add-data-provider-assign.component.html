@@ -1,9 +1,12 @@
-<div class="text-center" *ngIf="formType == 'add'">
-  <h4>Add Data Provider Assign</h4>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12" style="margin-left:-8px">
+    <app-breadcrumbs [items]='itemsPath'></app-breadcrumbs>
+  </div>
 </div>
-<div class="text-center" *ngIf="formType == 'edit'">
-  <h4>Edit Sales Recon Data Providers Assign</h4>
+<div class="panel-heading section-padding">
+  <h3 class="panel-title" style="font-size: 24px">{{header}}</h3>
 </div>
+
 <div class="row">
   <div class="col-lg-3 col-md-3 col-xs-3">
     <div>
@@ -234,7 +237,9 @@
 
 </div>
 <br>
-<div class="text-center">
-  <app-button (click)="resetAll()" label="Reset" styleClass='button-action'></app-button>
+<div class="addCheckListButtons">
+  <div class="col-sm-8 col-md-8 col-lg-8">
   <app-button (click)="saveData()" [disabled]='disable()' label="Save" styleClass='button-action'></app-button>
+  <app-button (click)="resetAll()" label="Clear All" styleClass='button-action'></app-button>
+  </div>
 </div>
