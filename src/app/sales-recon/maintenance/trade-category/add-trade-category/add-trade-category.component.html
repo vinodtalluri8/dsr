@@ -35,7 +35,20 @@
       </div>
     </div>
 
-    <div class="row">
+    <div>
+      <div class="row paddingTopClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Trade Flow Type Code</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.tradeFlowTypeCode = $event' [selectedItem]='tradeFlowTypeCode'></app-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="row">
       <div class="col-12">
         <label for="title" class="control-label">Trade Recon Include Flag</label>
         <p-checkbox name="group1" value="checked" label="" inputId="on"></p-checkbox>
@@ -46,7 +59,7 @@
         <label for="title" class="control-label">Roll Fwd Include Flag</label>
         <p-checkbox name="group1" value="checked" label="" inputId="on"></p-checkbox>
       </div>
-    </div>
+    </div>-->
 
     <div *ngIf="formType == 'edit'">
       <div class="row paddingTopClass">
@@ -76,15 +89,21 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="row paddingTopClass">
+
+        <div>
+      <div class="row paddingTopClass dishide">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Trade Flow Type Code</label>
+          <label class="control-label">Fund</label>
         </div>
       </div>
       <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <app-dropdown [datasource]='mockDropDownData' (selectedItemChange)='this.tradeFlowTypeCode = $event' [selectedItem]='tradeFlowTypeCode'></app-dropdown>
+        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
+
+          <p-checkbox name="group1" value="checked" label="Trade Recon Include Flag" inputId="on"></p-checkbox>
+          <p-checkbox name="group1" value="checked" label="Roll Fwd Include Flag" inputId="on"></p-checkbox>
+          <!--<p-radioButton name="group1" value="Trade Flag" label="Trade Flag" (click)="checkRadio('Trade Flag')"></p-radioButton>
+          <p-radioButton name="group1" value="Position Flag" label="Position Flag" (click)="checkRadio('Position Flag')"></p-radioButton>-->
+          <!--<p-checkbox name="group1" value="Trade Flag" label="Trade Flag" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>-->
         </div>
       </div>
     </div>

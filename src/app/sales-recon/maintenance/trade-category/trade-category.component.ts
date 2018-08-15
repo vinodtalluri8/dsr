@@ -102,7 +102,7 @@ export class TradeCategoryComponent implements OnInit {
   addNew() {
     this.router.navigate(['/maintenance/tradecategory/add']);
   }
-  editDataProvider() {
+  edit() {
     this.router.navigate(['/maintenance/tradecategory/edit']);
   }
 

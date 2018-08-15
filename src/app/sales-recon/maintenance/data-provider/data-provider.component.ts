@@ -90,7 +90,7 @@ export class DataProviderComponent implements OnInit {
   addNew() {
     this.router.navigate(['/maintenance/dataprovider/add']);
   }
-  editDataProvider() {
+  edit() {
     this.router.navigate(['/maintenance/dataprovider/edit']);
   }
 }

@@ -21,21 +21,7 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="row paddingTopClass dishide">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Fund</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
 
-          <p-radioButton name="group1" value="Trade Flag" label="Trade Flag" (click)="checkRadio('Trade Flag')"></p-radioButton>
-          <p-radioButton name="group1" value="Position Flag" label="Position Flag" (click)="checkRadio('Position Flag')"></p-radioButton>
-          <!--<p-checkbox name="group1" value="Trade Flag" label="Trade Flag" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>-->
-        </div>
-      </div>
-    </div>
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -61,6 +47,23 @@
         </div>
       </div>
     </div>
+        <div>
+      <div class="row paddingTopClass dishide">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Fund</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
+
+          <p-checkbox name="group1" value="checked" label="Trade Flag" inputId="on"></p-checkbox>
+          <p-checkbox name="group1" value="checked" label="Position Flag" inputId="on"></p-checkbox>
+          <!--<p-radioButton name="group1" value="Trade Flag" label="Trade Flag" (click)="checkRadio('Trade Flag')"></p-radioButton>
+          <p-radioButton name="group1" value="Position Flag" label="Position Flag" (click)="checkRadio('Position Flag')"></p-radioButton>-->
+          <!--<p-checkbox name="group1" value="Trade Flag" label="Trade Flag" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>-->
+        </div>
+      </div>
+    </div>
     <div>
       <div class="row paddingTopClass dishide">
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -70,8 +73,8 @@
       <div class="row paddingDataClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
 
-          <p-radioButton name="group1" value="Position Flag" label="TA Omnibus Account Flag" (click)="checkRadio('Position Flag')"></p-radioButton>
-
+          <!--<p-radioButton name="group1" value="Position Flag" label="TA Omnibus Account Flag" (click)="checkRadio('Position Flag')"></p-radioButton>-->
+          <p-checkbox name="group1" value="checked" label="TA Omnibus Account Flag" inputId="on"></p-checkbox>
         </div>
       </div>
     </div>

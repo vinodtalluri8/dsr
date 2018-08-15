@@ -109,7 +109,7 @@ export class SystemValueComponent implements OnInit {
   addNew() {
     this.router.navigate(['/maintenance/systemvalue/add']);
   }
-  editDataProvider() {
+  edit() {
     this.router.navigate(['/maintenance/systemvalue/edit']);
   }
 

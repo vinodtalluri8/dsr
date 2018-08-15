@@ -20,21 +20,7 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="row paddingTopClass dishide">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Fund</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
 
-          <p-radioButton name="group1" value="Daily Trade Recon Flag" label="Daily Trade Recon Flag" (click)="checkRadio('Daily Trade Recon Flag')"></p-radioButton>
-          <p-radioButton name="group1" value="Position Recon Flag" label="Position Recon Flag" (click)="checkRadio('Position Recon Flag')"></p-radioButton>
-
-        </div>
-      </div>
-    </div>
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -60,6 +46,22 @@
         </div>
       </div>
     </div>
+        <div>
+      <div class="row paddingTopClass dishide">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Fund</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
+
+          <!--<p-radioButton name="group1" value="Daily Trade Recon Flag" label="Daily Trade Recon Flag" (click)="checkRadio('Daily Trade Recon Flag')"></p-radioButton>
+          <p-radioButton name="group1" value="Position Recon Flag" label="Position Recon Flag" (click)="checkRadio('Position Recon Flag')"></p-radioButton>-->
+          <p-checkbox name="group1" value="checked" label="Daily Trade Recon Flag" inputId="on"></p-checkbox>
+          <p-checkbox name="group1" value="checked" label="Position Recon Flag" inputId="on"></p-checkbox>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col-lg-4 col-md-4 col-xs-4">
     <div>
@@ -75,21 +77,7 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="row paddingTopClass dishide">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <label class="control-label">Fund</label>
-        </div>
-      </div>
-      <div class="row paddingDataClass">
-        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
 
-          <p-radioButton name="group1" value="Monthly Roll Forward Flag" label="Monthly Roll Forward Flag" (click)="checkRadio('Monthly Roll Forward Flag')"></p-radioButton>
-          <p-radioButton name="group1" value="Compare Diff Net Flag" label="Compare Diff Net Flag" (click)="checkRadio('Compare Diff Net Flag')"></p-radioButton>
-
-        </div>
-      </div>
-    </div>
     <div>
       <div class="row paddingTopClass">
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -114,6 +102,23 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
           <app-input (inputTextSelected)='this.posFailThresholdShares = $event' #inputposFailThresholdShares [value]='posFailThresholdShares'
             maxlength="60"></app-input>
+        </div>
+      </div>
+    </div>
+
+        <div>
+      <div class="row paddingTopClass dishide">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <label class="control-label">Fund</label>
+        </div>
+      </div>
+      <div class="row paddingDataClass">
+        <div class="col-sm-12 col-md-12 col-lg-12 radioMargin">
+          <p-checkbox name="group1" value="checked" label="Monthly Roll Forward Flag" inputId="on"></p-checkbox>
+          <p-checkbox name="group1" value="checked" label="Compare Diff Net Flag" inputId="on"></p-checkbox>
+          <!--<p-radioButton name="group1" value="Monthly Roll Forward Flag" label="Monthly Roll Forward Flag" (click)="checkRadio('Monthly Roll Forward Flag')"></p-radioButton>
+          <p-radioButton name="group1" value="Compare Diff Net Flag" label="Compare Diff Net Flag" (click)="checkRadio('Compare Diff Net Flag')"></p-radioButton>-->
+
         </div>
       </div>
     </div>

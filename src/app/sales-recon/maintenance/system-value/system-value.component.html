@@ -52,7 +52,8 @@
         <td class="text-center">{{car.notes}}</td>
         <td class="text-center">{{car.activeStatus}}</td>
         <td class="text-center">
-          <app-button class="editButton" label='Modify' (click)="editDataProvider()" styleClass='button-action'></app-button>
+          <!--<app-button class="editButton" label='Modify' (click)="editDataProvider()" styleClass='button-action'></app-button>-->
+          <a class="hyperlink displaycolor" (click)="edit()">Modify</a>
         </td>
       </tr>
     </ng-template>

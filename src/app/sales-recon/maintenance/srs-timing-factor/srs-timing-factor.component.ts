@@ -103,7 +103,7 @@ export class SrsTimingFactorComponent implements OnInit {
   addNew() {
     this.router.navigate(['/maintenance/srstimingfactor/add']);
   }
-  editDataProvider() {
+  edit() {
     this.router.navigate(['/maintenance/srstimingfactor/edit']);
   }
 

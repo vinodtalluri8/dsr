@@ -55,7 +55,8 @@
         <td class="text-center">{{car.activeFlag}}</td>
         <!--<td class="text-center"><button>Edit</button></td>-->
         <td class="text-center">
-          <app-button label='Modify' routerLink='/maintenance/editdataprovider' (click)="editDataProvider()" styleClass='button-action'></app-button>
+          <a class="hyperlink displaycolor" (click)="edit()">Modify</a>
+          <!--<app-button label='Modify' routerLink='/maintenance/editdataprovider' (click)="editDataProvider()" styleClass='button-action'></app-button>-->
         </td>
       </tr>
     </ng-template>

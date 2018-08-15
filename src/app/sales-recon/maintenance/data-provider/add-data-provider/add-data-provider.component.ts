@@ -44,9 +44,9 @@ export class AddDataProviderComponent implements OnInit {
     } else {
       this.header = 'Edit Sales Recon Data Providers';
       this.itemsPath = [
-      { label: 'Maintenance'},
-      { label: 'Data Provider'},
-      { label: 'Edit Data Provider'}
+      { label: 'Maintenance', routerLink: ['']},
+      { label: 'Data Provider', routerLink: ['/maintenance/dataprovider']},
+      { label: 'Edit Data Provider', routerLink: ['']}
       ];
     }
     this.preloadData();
